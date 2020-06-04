@@ -6,9 +6,11 @@
 class CuentaVip : public Cuenta
 {
 	public:
-		CuentaVip(std::string titular, long saldo = 0);
-		virtual void mostrar(void);
+		CuentaVip(std::string titular, int saldo = 0);
+        virtual ~CuentaVip();
+
+		std::string nombre(void);
+        int retirar(int cantidad);
 };
 
 #endif
-

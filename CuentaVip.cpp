@@ -1,15 +1,26 @@
 #include "CuentaVip.h"
-#include <iostream>
+#include <cassert>
 
-CuentaVip::CuentaVip(std::string titular, long saldo):
+CuentaVip::CuentaVip(std::string titular, int saldo):
     Cuenta(titular, saldo)
 {
+    std::cout << "Ctor CuentaVip de " << m_titular << std::endl;
 }
 
-void CuentaVip::mostrar(void)
+CuentaVip::~CuentaVip()
 {
-    std::cout << "Cuenta VIP de " << m_titular <<
-                 " con " << m_saldo <<
-                 " euros" << std::endl;
+    std::cout << "Dtor CuentaVip de " << m_titular << std::endl;
 }
 
+std::string CuentaVip::nombre(void)
+{
+    return "Cuetan Vip";
+}
+
+int CuentaVip::retirar(int cantidad)
+{
+    assert(cantidad > 0);
+
+    m_saldo -= cantidad;
+    return cantidad;
+}
