@@ -7,7 +7,7 @@ class CuentaVip : public Cuenta
 {
 	public:
 		CuentaVip(std::string titular, int saldo = 0);
-        virtual ~CuentaVip();
+        ~CuentaVip();
 
 		std::string nombre(void);
         int retirar(int cantidad);

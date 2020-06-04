@@ -7,7 +7,7 @@ class CuentaAhorro : public Cuenta
 {
 	public:
 		CuentaAhorro(std::string titular, int saldo = 0);
-        virtual ~CuentaAhorro();
+        ~CuentaAhorro();
 
 		std::string nombre(void);
         int ingresar(int cantidad);
